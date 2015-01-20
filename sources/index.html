@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calcoolator</title>
+<style>
+div {
+    color: white;
+    background-color:black;  
+    
+}
+   
+</style>
+    
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+    <!--AppFramework plugin for sliding side menu-->
+    <script type="text/javascript" charset="utf-8" src="appframework/plugins/af.slidemenu.js"></script>
+
+    <!-- phantom library, needed for XDK "legacy" container api calls -->
+    <script src="intelxdk.js"></script>
+    <!-- phantom library, needed for Cordova api calls -->
+    <script src="cordova.js"></script>
+    <!-- phantom library, needed for XDK "legacy" container CORS -->
+    <script src="xhr.js"></script>
+    
+    <script>
+        var onDeviceReady=function(){                             // called when Cordova is ready
+           if( window.Cordova && navigator.splashscreen ) {     // Cordova API detected
+               $.ui.launch(); 
+               navigator.splashscreen.hide() ;                 // hide splash screen
+            }
+        } ;
+        document.addEventListener("deviceready", onDeviceReady, false) ;
+    </script>
+    
+    <script>   
+        $.ui.autoLaunch = false;
+        $.ui.animateHeaders = false;
+                
+        $(document).ready(function(){
+            $.ui.setSideMenuWidth('260px');
+            $.ui.launch();
+        });
+    </script>
+</head>
+<body> 
+<div id="afui">
+    
+    <!--Left Side Menu Navigation bar -->
+    <nav>
+        <ul class="list">
+            <li><a href="#page1" class="icon home">Home</a></li>
+            <li><a href="calculator.html" class="icon heart">Calcoolator</a></li>
+            
+            <li><a href="#page3" class="icon user">Meet The Developers</a></li>
+        </ul>
+    </nav>
+    
+    <div id="content" style=""> 
+        
+    <!--Main View Pages-->
+        <div class="panel" title="Home" id="page1" data-footer="none" selected="true" style="color:white">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Home</h1>
+            </header>
+            <center><p>Here are some equations that might help you</p></center>
+            <select onchange="location = this.options[this.selectedIndex].value;">
+                <option value="Select">Select</option>
+                <option value="Physics.html">Physics</option>
+                <option value="Algebra.html">Algebra</option>
+                <option value="Geometry.html">Geometry</option>
+            </select>
+        </div>
+     
+ 
+        
+        
+        <div class="panel" title="Developers" id="page3" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>The Developers</h1>
+            </header>
+            <p>This is view for third menu item</p>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>    

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Theme Download</title>
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min" />
+	<link rel="stylesheet" href="css/themes/theme1.css" />
+	<link rel="stylesheet" href="css/themes/theme1.min.css" />
+	<link rel="stylesheet" href="css/themes/myTheme.css" />
+	 
+<script>
+
+function gthere(){
+location.href="map/map.html";
+}
+</script>
+
+	
+  </script>
+	<style>
+	* {
+	
+	box-sizing: border-box;
+	
+	/* Better text styling */
+	font: bold 14px Arial, sans-serif;
+}
+#resize{
+width:100%;
+}
+	#calculator {
+	width: 330px;
+	
+	padding: 20px 20px 9px;
+	
+	background: #181818 ;
+	
+	border-radius: 7px;
+	box-shadow: 0px 4px #181818, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Top portion */
+.top span.clear {
+	float: left;
+}
+
+/* Inset shadow on the screen to create indent */
+.top .screen {
+	height: 40px;
+	width: 211px;
+	
+	float: right;
+	
+	padding: 0 10px;
+	
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	
+	/* Typography */
+	font-size: 19px;
+	line-height: 38px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/* Clear floats */
+.keys, .top {overflow: hidden;}
+
+/* Applying same to the keys */
+.keys span, .top span.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	
+	cursor: pointer;
+	
+	width: 66px;
+	height: 36px;
+	
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	
+	margin: 0 7px 11px 0;
+	
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+	
+	/* prevent selection of text inside keys */
+	user-select: none;
+	
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* Remove right margins from operator keys */
+/* style different type of keys (operators/evaluate/clear) differently */
+.keys span.operator {
+	background: #FFF0F5;
+	margin-right: 0;
+}
+
+.keys span.eval {
+	background: #f1ff92;
+	box-shadow: 0px 4px #9da853;
+	color: #888e5f;
+}
+
+.top span.clear {
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: white;
+}
+
+/* Some hover effects */
+.keys span:hover {
+	background: #9c89f6;
+	box-shadow: 0px 4px #6b54d3;
+	color: white;
+}
+
+.keys span.eval:hover {
+	background: #abb850;
+	box-shadow: 0px 4px #717a33;
+	color: #ffffff;
+}
+
+.top span.clear:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+/* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+.keys span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+.keys span.eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+.top span.clear:active {
+	top: 4px;
+	box-shadow: 0px 0px #d3545d;
+}
+	</style>
+	</head>
+
+	<body>
+		
+<div data-role="page" data-theme="a" id="home">
+	
+<div data-role="content" data-theme="a" align="center">
+<a href="#bsemc" ><img src="img/calcc.png"  width="70%"></a>
+<h3>Formulas and Equations:</h3>
+		<a href="#physics" data-role="button">Physics</a>
+		<a href="#algebra" data-role="button">Algebra</a>
+		<a href="#geometry" data-role="button">Geometry</a>
+		
+		<h3>Support Us!</h3>
+		<a href="https://www.facebook.com/calcoolator" target="_blank"  ><img src="img/fb.png" width="30%"></a>
+	    <a href="http://instagram.com/calcoolator" target="_blank" ><img src="img/insta.png" width="30%"></a>
+		<a href="https://twitter.com/calcoolator" target="_blank"  ><img src="img/twitter.png" width="30%"></a>
+		
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#about">ABOUT</a></li>
+			<li><a href="#calc">CALCULATOR</a></li>
+			
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+
+<div data-role="page" data-theme="a" id="about">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+<h3>Our App is a Must!</h3>
+		<h4>The app was created to be a useful tool for a variety of users.</h4>
+		<h4>In addition, This app is not intended for cheating but instead for learning.</h4>
+		
+		</br>
+		
+		<a href="#dev" data-rel="popup" data-role="button">Meet The Developers</a>
+
+<div data-role="popup" id="dev">
+	<h4>Sir Glenn Tipay(Our Handsome Coach)<h4>
+	<h4>Rob Julio(Our Developer)<h4>
+	<h4>Azil Shane De'Leon(Our App Analyst)<h4>
+	<h4>Bojo Isidro(Our UserInterface Designer)<h4>
+</div>
+	
+	</br>
+	
+	<div data-role="content" data-theme="a" align="left">
+	<h3>Special Thanks!</h3>
+	<center><h4> To You :) </h4></center
+	<ul>
+	<li> Gordon College </li>
+	<li> Olongapo City National High School Ict Dept. </li>
+	<li> Sir John Paul Lastrollo </li>
+	<li> Sir Mark Jowel Rebogio</li>
+	<li> And Ofcourse A Big Thanks to GOD! </li>
+	
+	</ul>
+	</div>
+	
+		
+		
+		
+		
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+
+<div data-role="page" data-theme="a" id="physics">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+<h3>Some useful stuffs in Physics</h3>
+		<h4>contents</h4>
+		
+	<a href="#popupBasic" data-rel="popup" data-role="button">Velocity</a>
+
+<div data-role="popup" id="popupBasic">
+	<p>(v=s/t)</p>
+	</br>
+	<p>Velocity is the rate of change of the displacement, the difference between the final and initial position of an object. Velocity is equivalent to a specification of its speed and direction of motion</p>
+</div>
+
+<a href="#p1" data-rel="popup" data-role="button">Momentum</a>
+
+<div data-role="popup" id="p1">
+	<p>(p = mv)</p>
+	</br>
+	<p>Momentum (p) is the quantity of motion in a body. A heavy body moving at a fast velocity is difficult to stop. A light body at a slow speed, on the other hand can be stopped easily. So momentum has to do with both mass and velocity.</p>
+</div>
+
+<a href="#p2" data-rel="popup" data-role="button">Impulse</a>
+
+<div data-role="popup" id="p2">
+	<p>(Ft = mv - mu)</p>
+	</br>
+	<p>This is the change in the momentum of a body caused over a very short time. Let m be the mass and v and u the final and initial velocities of a body.</p>
+</div>
+
+<a href="#p3" data-rel="popup" data-role="button">Density</a>
+
+<div data-role="popup" id="p3">
+	<p>(D = m/V)</p>
+	</br>
+	<p>The mass of a substance contained in unit volume is its density (D).</p>
+</div>
+
+
+<a href="#p4" data-rel="popup" data-role="button">Work and Energy</a>
+
+<div data-role="popup" id="p4">
+	<p>(W = Fx)</p>
+	</br>
+	<p>As we know from the law of conservation of energy: energy is always conserved.
+                    Work is the product of force and the distance over which it moves. Imagine you are pushing a heavy box across the room. The further you move the more work you do! If W is work, F the force and x the distance then.</p>
+</div>
+
+<a href="#p5" data-rel="popup" data-role="button">Power</a>
+
+<div data-role="popup" id="p5">
+	<p>(P = W/t) (P = E/t)</p>
+	</br>
+	<p>Power (P) is work( W) done in unit time (t) as work and energy (E) are same it follows power is also energy consumed or generated per unit time, In measuring power Horsepower is a unit which is in common use. However in physics we use Watt. So the first thing to do in solving any problem related to power is to convert horsepower to Watts. 1 horsepower (hp) = 746 Watts</p>
+	</div>
+
+	<a href="#p6" data-rel="popup" data-role="button">Time and Distance</a>
+
+<div data-role="popup" id="p6">
+<p>(v = u + at) (v 2 = u 2 + 2as) (s = ut + 1/2 at 2) </p>
+</br>
+<p>By one dimension we mean that the body is moving only in one plane and in a straight line. Like if we roll a marble on a flat table, and if we roll it in a straight line (not easy!), then it would be undergoing one-dimensional motion. There are four variables which put together in an equation can describe this motion. These are Initial Velocity (u); Final Velocity (v), Acceleration (a), Distance Traveled (s) and Time elapsed (t). The equations which tell us the relationship between these variables are as given above. </p>
+</div>
+	
+	
+	
+<div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+   <h3>Tap me for more cool info!</h3>
+   <iframe src="http://tutor4physics.com/formulas.htm" width="100%" height="320" seamless=""></iframe>
+</div>
+
+
+	
+		
+		
+		
+		
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+<div data-role="page" data-theme="a" id="algebra">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+<h1>ALGEBRA</h1>
+<h3>Some useful stuffs in Algebra</h3>
+		<h4>contents</h4>
+		
+	<a href="#popupBasic1" data-rel="popup" data-role="button">Solving Simple Equation</a>
+
+<div data-role="popup" id="popupBasic1">
+
+	<p>The equation is similar to problems which you may have done in ordinary mathematics such as: __ + 16 = 30 You could easily guess that __ equals 14 or do 30 - 16 to find that __ equals 14. In this problem __ stood for an unknown number; in an equation we use variables, or any letter in the alphabet. When written algebraically the problem would be:
+x + 16 = 30 and the answer should be written:x = 14</p>
+</div>
+
+
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+<div data-role="page" data-theme="a" id="geometry">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+<h1>GEOMETRY</h1>
+<h3>Some useful stuffs in Geometry</h3>
+		<h4>contents</h4>
+		
+	<a href="#popupBasic2" data-rel="popup" data-role="button">Velocity</a>
+
+<div data-role="popup" id="popupBasic2">
+	<p>(v=s/t)</p>
+	</br>
+	<p>Velocity is the rate of change of the displacement, the difference between the final and initial position of an object. Velocity is equivalent to a specification of its speed and direction of motion</p>
+</div>
+
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+
+
+
+
+
+<div data-role="page" data-theme="a" id="calc">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+<div id="resize">
+<div id="calculator">
+	<!-- Screen and clear key -->
+	<div class="top">
+		<span class="clear">C</span>
+		<div class="screen"></div>
+	</div>
+	
+	<div class="keys">
+		<!-- operators and other keys -->
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span class="operator">+</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span class="operator">-</span>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span class="operator">/</span>
+		<span>0</span>
+		<span>.</span>
+		<span class="eval">=</span>
+		<span class="operator">x</span>
+	</div>
+</div>
+</div>
+
+
+
+
+<a href="#bmipage" data-role="button">BMI</a>
+<a href="#convertionpage" data-role="button"> Money Converter</a>
+<a href="#gpapage" data-role="button"> Percent Calculator</a>
+<a href="#moneycounterpage" data-role="button"> Money Counter</a>
+<a onClick="gthere()" data-role="button"> Here Maps Distance Calculator</a>
+
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">HOME</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+<div data-role="page" data-theme="a" id="bmipage">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+
+<center><h1>English Body Mass Index</h1></center>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Original:  Marat Rikelman (rikelman@bellsouth.net) -->
+
+
+
+<!-- Begin
+function mod(div,base) {
+return Math.round(div - (Math.floor(div/base)*base));
+}
+function calcBmi() {
+var w = document.bmi.weight.value * 1;
+var HeightFeetInt = document.bmi.htf.value * 1;
+var HeightInchesInt = document.bmi.hti.value * 1;
+HeightFeetConvert = HeightFeetInt * 12;
+h = HeightFeetConvert + HeightInchesInt;
+displaybmi = (Math.round((w * 703) / (h * h)));
+var rvalue = true;
+if ( (w <= 35) || (w >= 500)  || (h <= 48) || (h >= 120) ) {
+alert ("Invalid data.  Please check and re-enter!");
+rvalue = false;
+}
+if (rvalue) {
+if (HeightInchesInt > 11) {
+reminderinches = mod(HeightInchesInt,12);
+document.bmi.hti.value = reminderinches;
+document.bmi.htf.value = HeightFeetInt +
+((HeightInchesInt - reminderinches)/12);
+document.bmi.answer.value = displaybmi;
+}
+if (displaybmi <19)
+document.bmi.comment.value = "Underweight";
+if (displaybmi >=19 && displaybmi <=25)
+document.bmi.comment.value = "Desirable";
+if (displaybmi >=26 && displaybmi <=29)
+document.bmi.comment.value = "prone to health risks";
+if (displaybmi >=30 && displaybmi <=40)
+document.bmi.comment.value = "Obese";
+if (displaybmi >40)
+document.bmi.comment.value = "Extremely obese";
+document.bmi.answer.value = displaybmi; }
+return rvalue;
+}
+//  End -->
+
+</script>
+<td align=center><B>Weight:</B>
+<input type=text name=weight SIZE=3 maxlength=3> lbs.</td>
+</tr>
+<tr>
+<td align=center><B>Height:</B>
+<input type=text name=htf size=1 maxlength=1> Ft.
+<input type=text name=hti size=2 maxlength=2> In.
+</td>
+</tr>
+<tr>
+<td align=center>
+<input type=button value="Calculate BMI" onclick="calcBmi()">
+
+<hr></td>
+</tr>
+<tr>
+<td><B>Body Mass Index</B>
+<input type=text name=answer size=3>
+</td>
+</tr>
+<tr>
+<td>
+According to the Panel on Energy, Obesity, and
+Body Weight Standards published by American
+Journal of Clinical Nutrition, your category is:<br>
+<input type=text name=comment size=25>
+</td>
+</tr>
+</table>
+</center>
+</form>
+
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">HOME</a></li>
+			<li><a href="#calc">BACK</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+
+
+<div data-role="page" data-theme="a" id="moneycounterpage">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+
+<center><h1>Money Counter</h1></center>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+<!-- Begin
+function s(num, val) {
+amount = num * 1; // amount is the num or NaN
+sum = (!num ? 0 : num) * val;  // the sum for that bill or coin
+
+if (isNaN(amount)) { // if the entire is not a number
+
+alert(
+"' " + num + " ' is not a valid entry and that field will "
++ "not be included in the total money calculation."
+);
+
+return 0;
+}
+else
+return sum; // if it is OK, send sum back
+}
+
+function money(form) {
+hun = s(form.hun.value, 100); // Each amount is the returned value
+fif = s(form.fif.value, 50);  // for the amount in the s() function
+twe = s(form.twe.value, 20);
+ten = s(form.ten.value, 10);
+fiv = s(form.fiv.value, 5);
+one = s(form.one.value, 1);
+hlf = s(form.hlf.value, .5);
+qtr = s(form.qtr.value, .25);
+dme = s(form.dme.value, .1);
+nck = s(form.nck.value, .05);
+pny = s(form.pny.value, .01);
+
+// add up all the amounts
+var ttl = hun + fif + twe + ten + fiv
++ one + hlf + qtr + dme + nck + pny;
+
+// rounds total to two decimal places
+
+ttl = "" + ((Math.round(ttl * 100)) / 100);
+
+dec1 = ttl.substring(ttl.length-3, ttl.length-2);
+dec2 = ttl.substring(ttl.length-2, ttl.length-1);
+
+if (dec1 != '.') { // adds trailing zeroes if necessary
+if (dec2 == '.') ttl += "0";
+else ttl += ".00";
+}
+form.total.value = "$ " + ttl; // display total amount
+}
+//  End -->
+</script>
+<center>
+<form name=coinform>
+<table border=1>
+<tr>
+<td align=center>$ 100</td>
+<td align=center>$ 50</td>
+<td align=center>$ 20</td>
+<td align=center>$ 10</td>
+<td align=center>$ 5</td>
+<td align=center>$ 1</td>
+</tr>
+<tr>
+<td align=center><input type=text name=hun size=3></td>
+<td align=center><input type=text name=fif size=3></td>
+<td align=center><input type=text name=twe size=3></td>
+<td align=center><input type=text name=ten size=3></td>
+<td align=center><input type=text name=fiv size=3></td>
+<td align=center><input type=text name=one size=3></td>
+</tr>
+<tr>
+<td colspan=6> </td>
+</tr>
+<tr>
+<td> </td>
+<td align=center>50 ¢</td>
+<td align=center>25 ¢</td>
+<td align=center>10 ¢</td>
+<td align=center>5 ¢</td>
+<td align=center>1 ¢</td>
+</tr>
+<tr>
+<td> </td>
+<td align=center><input type=text name=hlf size=3></td>
+<td align=center><input type=text name=qtr size=3></td>
+<td align=center><input type=text name=dme size=3></td>
+<td align=center><input type=text name=nck size=3></td>
+<td align=center><input type=text name=pny size=3></td>
+</tr>
+<tr>
+<td colspan=5 align=center>
+<input type=button name=calc value="Calculate" onClick="javascript:money(this.form)">
+<input type=text name=total size=10>
+</td>
+</tr>
+</table>
+</form>
+</center>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">HOME</a></li>
+			<li><a href="#calc">BACK</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+
+<div data-role="page" data-theme="a" id="gpapage">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+<center>
+<form name="form1">
+<table border=1 cellpadding=4 cellspacing=1>
+<tr>
+<td align=center>What is
+<input type="text" name="a" size=5>
+% of <input type="text" name="b" size=5>?</td>
+<td align=center>Answer: <input type="text" name="total1"
+size=5 maxlength=40></td>
+<td align=center><input type="button" value="Calculate"
+onClick="calc1(this.form)"></td>
+</tr>
+<tr>
+<td align=center colspan=3 align=center>Or...</td>
+</tr>
+<tr>
+<td align=center><input type="text" name="c" size=5>
+ is what
+percent of <input type="text" name="d" size=5>?</td>
+<td align=center>Answer: <input type="text" name="total2"
+size=5> %</td>
+<td align=center><input type="button" value="Calculate"
+onClick="calc2(this.form)"></td>
+</tr>
+</table>
+</form>
+</center>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Tom Richardson Jr. (gooftroop@geocities.com) -->
+
+
+
+<!-- Begin
+function calc1(form) {
+a = form.a.value/100;
+b = a*form.b.value;
+form.total1.value = b;
+}
+function calc2(form) {
+a = form.c.value;
+b = form.d.value;
+c = a/b;
+d = c*100;
+form.total2.value = d;
+}
+
+//  End -->
+</script>
+</div>
+<div data-role="footer" data-position="fixed" data-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#calc">Back</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+<div data-role="page" data-theme="a" id="convertionpage">
+	<div data-role="header" data-position="fixed" data-toggle="false">
+				<img src="img/header.png" width="100%" />
+		</div>
+<div data-role="content" data-theme="a" align="center">
+<h1>MONEY CONVERTER</h1>
+<table>
+
+
+ <tr>
+ <td></td>
+ <td>----------PESO----------</td>
+ </tr>
+  
+<tr>
+<td></td>
+<td><input type="text" id="txtPeso"></input></td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td id="lblDollar">--------DOLLAR--------</td>
+</tr>
+
+<tr>
+<td ></td>
+<td><input type="text" id="txtDollar"></input></td>
+</tr>
+
+
+<tr>
+<td></td>
+<td><button onClick="computeGrade()">---------COMPUTE---------</button></td>
+</tr>
+
+<tr>
+<td></td>
+<td><button onClick="changerate()" ondblClick="changeratedbl()">-----CHANGE RATE------</button></td>
+</tr>
+</table>
+    <table id="content"></table>
+   
+   
+<h1 id="appear"> </h1>
+</div>
+<div data-role="footer" data-position="fixed" data-toggle="false">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#calc">Back</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
+<script>
+
+$("#compute").click(function(){
+var a=parseInt(document.getElementById("w").value);
+var b=parseInt(document.getElementById("h").value);
+var comp=(a/(b*b))*703;
+document.getElementById("res").innerHTML=comp;
+});
+
+// Get all the keys from document
+var keys = document.querySelectorAll('#calculator span');
+var operators = ['+', '-', 'x', 'รท'];
+var decimalAdded = false;
+
+// Add onclick event to all the keys and perform operations
+for(var i = 0; i < keys.length; i++) {
+	keys[i].onclick = function(e) {
+		// Get the input and button values
+		var input = document.querySelector('.screen');
+		var inputVal = input.innerHTML;
+		var btnVal = this.innerHTML;
+		
+		// Now, just append the key values (btnValue) to the input string and finally use javascript's eval function to get the result
+		// If clear key is pressed, erase everything
+		if(btnVal == 'C') {
+			input.innerHTML = '';
+			decimalAdded = false;
+		}
+		
+		// If eval key is pressed, calculate and display the result
+		else if(btnVal == '=') {
+			var equation = inputVal;
+			var lastChar = equation[equation.length - 1];
+			
+			// Replace all instances of x and รท with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
+			equation = equation.replace(/x/g, '*').replace(/รท/g, '/');
+			
+			// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
+			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
+				equation = equation.replace(/.$/, '');
+			
+			if(equation)
+				input.innerHTML = eval(equation);
+				
+			decimalAdded = false;
+		}
+		
+		// Basic functionality of the calculator is complete. But there are some problems like 
+		// 1. No two operators should be added consecutively.
+		// 2. The equation shouldn't start from an operator except minus
+		// 3. not more than 1 decimal should be there in a number
+		
+		// We'll fix these issues using some simple checks
+		
+		// indexOf works only in IE9+
+		else if(operators.indexOf(btnVal) > -1) {
+			// Operator is clicked
+			// Get the last character from the equation
+			var lastChar = inputVal[inputVal.length - 1];
+			
+			// Only add operator if input is not empty and there is no operator at the last
+			if(inputVal != '' && operators.indexOf(lastChar) == -1) 
+				input.innerHTML += btnVal;
+			
+			// Allow minus if the string is empty
+			else if(inputVal == '' && btnVal == '-') 
+				input.innerHTML += btnVal;
+			
+			// Replace the last operator (if exists) with the newly pressed operator
+			if(operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+				// Here, '.' matches any character while $ denotes the end of string, so anything (will be an operator in this case) at the end of string will get replaced by new operator
+				input.innerHTML = inputVal.replace(/.$/, btnVal);
+			}
+			
+			decimalAdded =false;
+		}
+		
+		// Now only the decimal problem is left. We can solve it easily using a flag 'decimalAdded' which we'll set once the decimal is added and prevent more decimals to be added once it's set. It will be reset when an operator, eval or clear key is pressed.
+		else if(btnVal == '.') {
+			if(!decimalAdded) {
+				input.innerHTML += btnVal;
+				decimalAdded = true;
+			}
+		}
+		
+		// if any other key is pressed, just append it
+		else {
+			input.innerHTML += btnVal;
+		}
+		
+		// prevent page jumps
+		e.preventDefault();
+	} 
+}
+</script>
+ <script>
+   document.getElementById('txtDollar').hidden = true;
+   document.getElementById('lblDollar').hidden = true;
+  
+  
+	if(!txtDollar.value){
+			txtDollar.value = window.localStorage.getItem('value');
+			}
+			txtDollar.addEventListener('keyup', function(){
+			window.localStorage.setItem('value',txtDollar.value);
+			}, false);
+			
+	  function computeGrade()
+	{
+	var a = parseFloat(document.getElementById('txtDollar').value);		
+	var b = parseFloat(document.getElementById('txtPeso').value);	
+	document.getElementById('appear').innerHTML = a*b;
+	}
+	
+	function changerate()
+	{
+	document.getElementById('txtDollar').hidden= false;
+	document.getElementById('lblDollar').hidden= false;
+	}
+	
+	function changeratedbl()
+	{
+	document.getElementById('txtDollar').hidden= true;
+	document.getElementById('lblDollar').hidden= true;
+	}
+	
+	
+    </script>
+	<script type="text/javascript" src="brain.js"></script>
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    bmInit();
+	  });
+	 
+	</script>
+	
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>
+	</body>
+</html>
