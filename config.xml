@@ -12,7 +12,7 @@
                 <gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 	
-	<icon src="css/icon.png" gap:platform="android" gap:density="xhdpi" />
+	<icon src="icon.png" gap:platform="android" gap:density="xhdpi" />
 	
 	<preference name="phonegap-version" value="3.3.0" />
 	
